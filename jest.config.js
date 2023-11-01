@@ -7,7 +7,7 @@ module.exports = {
     "^.+\\.svg$": "jest-svg-transformer",
   },
   transform: {
-    "^.+\\.css$": "jest-transform-css",
+    "^.+\\.(css|scss)$": "jest-transform-css",
   },
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
 };
