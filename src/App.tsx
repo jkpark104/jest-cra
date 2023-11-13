@@ -1,8 +1,16 @@
+import Container from "react-bootstrap/Container";
 import "./App.scss";
-import Options from "./pages/entry/Options";
+import { OrderDetailsProvider } from "./contexts/OrderDetails";
+import OrderEntry from "./pages/entry/OrderEntry";
 
 function App() {
-  return <Options optionType="scoops"></Options>;
+  return (
+    <Container>
+      <OrderDetailsProvider>
+        <OrderEntry />
+      </OrderDetailsProvider>
+    </Container>
+  );
 }
 
 export default App;
